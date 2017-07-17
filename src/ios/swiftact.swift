@@ -1,12 +1,10 @@
 @objc(swiftact) class swiftact : CDVPlugin {
 
-	func version(){
-		
-	}
-
-
-
-
+    func version(command: CDVInvokedUrlCommand){
+	   let strVersion = NSBundle .mainBundle() .objectForInfoDictionaryKey("CFBundleShortVersionString")
+	   print(strVersion)		
+    }
+	
     func echo(command: CDVInvokedUrlCommand) {
         var pluginResult = CDVPluginResult(
             status: CDVCommandStatus_ERROR
