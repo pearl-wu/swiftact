@@ -1,7 +1,12 @@
 @objc(swiftact) class swiftact : CDVPlugin {
 
     func version(command: CDVInvokedUrlCommand){
-	   let strVersion = NSBundle .mainBundle() .objectForInfoDictionaryKey("CFBundleShortVersionString")
+	    let strVersion = NSBundle .mainBundle() .objectForInfoDictionaryKey("CFBundleShortVersionString")
+	    var pluginResult = CDVPluginResult(
+	      status: CDVCommand_OK,
+	      messageAs: strVersion
+	    )
+	   self.commandDelegate!.send(pluginResult,callbackId:command.callbackId)
 	   print(strVersion)		
     }
 	
