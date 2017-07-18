@@ -1,4 +1,23 @@
-@objc(ModusEchoSwift) class ModusEchoSwift : CDVPlugin {
+@objc(swiftact) class swiftact : CDVPlugin {
+
+    func version(command: CDVInvokedUrlCommand){
+	    let strVersion = NSBundle .mainBundle() .objectForInfoDictionaryKey("CFBundleShortVersionString")
+	    var pluginResult = CDVPluginResult(
+	      status: CDVCommand_OK,
+	      messageAs: strVersion
+	    )
+	   self.commandDelegate!.send(pluginResult,callbackId:command.callbackId)
+	   print(strVersion)		
+    }
+	
+    func openimage(){
+    	let url = NSURL('');
+	let data = NSData(contentsOfURL:url!)
+	let newImage = UIImage(data:data!)
+	let newImage=UIImageView(image:newImage);
+	self.view.addSubview(imageView)
+    }
+	
     func echo(command: CDVInvokedUrlCommand) {
         var pluginResult = CDVPluginResult(
             status: CDVCommandStatus_ERROR
