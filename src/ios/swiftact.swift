@@ -11,7 +11,7 @@
     }
 	
     func openimage(){
-    	let url = NSURL();
+    	let url = NSURL('');
 	let data = NSData(contentsOfURL:url!)
 	let newImage = UIImage(data:data!)
 	let newImage=UIImageView(image:newImage);
