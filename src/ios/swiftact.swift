@@ -13,7 +13,7 @@
     func openimage(){
     	let url = NSURL();
 	let data = NSData(contentsOfURL:url!)
-	let
+	let newImage = UIImage(data:data!)
 	let newImage=UIImageView(image:newImage);
 	self.view.addSubview(imageView)
     }
