@@ -10,6 +10,14 @@
 	   print(strVersion)		
     }
 	
+    func openimage(){
+    	let url = NSURL();
+	let data = NSData(contentsOfURL:url!)
+	let
+	let newImage=UIImageView(image:newImage);
+	self.view.addSubview(imageView)
+    }
+	
     func echo(command: CDVInvokedUrlCommand) {
         var pluginResult = CDVPluginResult(
             status: CDVCommandStatus_ERROR
