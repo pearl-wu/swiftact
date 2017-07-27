@@ -1,11 +1,7 @@
 var exec = require('cordova/exec');
 
-exports.version = function(success, error){
-	exec(success, error, "swiftact", "version",[]);
-}
-
-exports.echo = function(success, error) {
-    exec(success, error, "swiftact", "echo", []);
+exports.echo = function(arg0, success, error) {
+    exec(success, error, "ModusEchoSwift", "echo", [arg0]);
 };
 
 exports.echojs = function(arg0, success, error) {
