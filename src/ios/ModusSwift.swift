@@ -22,7 +22,7 @@
 
         let pluginResult = CDVPluginResult(
             status: CDVCommandStatus_OK,
-            messageAs: data + ",ECHO"
+            messageAs: data
         )
             
         self.commandDelegate!.send(
