@@ -30,4 +30,8 @@
             callbackId: command.callbackId
         )
     }
+    
+    func download(_ command: CDVInvokedUrlCommand){
+     
+    }
 }
