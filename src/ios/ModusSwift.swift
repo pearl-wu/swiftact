@@ -1,5 +1,5 @@
 @objc(ModusEchoSwift) class ModusEchoSwift : CDVPlugin {
-    func echo(_ command: CDVInvokedUrlCommand) {
+    func version(_ command: CDVInvokedUrlCommand) {
         let msg = command.arguments[0] as? String ?? ""
         var data = ""
         //print("method call OK!")
