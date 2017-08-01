@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.cordova.plugin.echoswift" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com-moduscreate-pllugins-echoswift" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>ModusEchoSwift</name>
     <js-module name="ModusEchoSwift" src="www/ModusEchoSwift.js">
-        <clobbers target="ModusEchoSwift" />
+        <clobbers target="cordova.plugins.ModusEchoSwift" />
     </js-module>
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
