@@ -1,13 +1,14 @@
 @objc(ModusEchoSwift) class ModusEchoSwift : CDVPlugin {
     func echo(command: CDVInvokedUrlCommand) {
-        var pluginResult = CDVPluginResult(
+        print("echo echo echo echo")
+        /*var pluginResult = CDVPluginResult(
             status: CDVCommandStatus_ERROR
         )
 
         let msg = command.arguments[0] as? String ?? ""
 
         if msg.characters.count > 0 {
-            /* UIAlertController is iOS 8 or newer only. */
+            // UIAlertController is iOS 8 or newer only. 
             let toastController: UIAlertController = 
                 UIAlertController(
                     title: "", 
@@ -45,6 +46,6 @@
         self.commandDelegate!.sendPluginResult(
             pluginResult, 
             callbackId: command.callbackId
-        )
+        )*/
     }
 }
