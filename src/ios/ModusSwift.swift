@@ -1,4 +1,4 @@
-@objc(ModusEchoSwift) class ModusEchoSwift : CDVPlugin {
+@objc(ModusSwift) class ModusSwift : CDVPlugin {
     func version(_ command: CDVInvokedUrlCommand) {
         let msg = command.arguments[0] as? String ?? ""
         var data = ""
