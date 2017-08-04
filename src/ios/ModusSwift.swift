@@ -23,9 +23,9 @@
     func toptype(_ command: CDVInvokedUrlCommand){
         let msg = command.arguments[0] as? String ?? ""
         if(msg == "black"){
-            UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
-        }else{
             UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        }else{
+            UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         }
     }
     
