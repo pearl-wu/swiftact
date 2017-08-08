@@ -6,6 +6,10 @@ exports.version = function(arg0, success, error) {
 exports.top = function(arg0, success, error){
     exec(success, error, "ModusSwift", "toptype", [arg0]);
 };
+
+exports.fileview = function(arg0, success,error){
+    exec(success,error,"ModusSwift","fileview",[arg0]);
+}
 /*exports.echojs = function(arg0, success, error) {
 	if (arg0 && typeof(arg0) === 'string' && arg0.length > 0) {
 		success(arg0);
