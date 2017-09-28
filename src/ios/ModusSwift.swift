@@ -32,11 +32,11 @@
     func downloadfile(_ command: CDVInvokedUrlCommand){
         let mag = command.arguments[0] as? String ?? ""
         let documentsUrl:URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL!
-        let destinationFileUrl = documentsUrl.appendingPathComponent(mag)
+        _ = documentsUrl.appendingPathComponent(mag)
         let fileURL = URL(string:mag)
-    
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLRequest(url:fileURL!)
+        
+        _ = URLSessionConfiguration.default
+        _ = URLRequest(url:fileURL!)
         
         
         
@@ -61,7 +61,7 @@
         let mag = command.arguments[0] as? String ?? ""
         let fileManager = FileManager.default
         let filePath:String = NSHomeDirectory() + "/Documents/ \(mag)"
-        let exist = fileManager.fileExists(atPath: filePath)
+        _ = fileManager.fileExists(atPath: filePath)
     }
     
     func fileview(_ command: CDVInvokedUrlCommand){
@@ -93,19 +93,19 @@
         
         
         /*do {
-            // Get the directory contents urls (including subfolders urls)
-            let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil, options: [])
-            //print(directoryContents)
-            
-            // if you want to filter the directory contents you can do like this:
-            let mp3Files = directoryContents.filter{ $0.pathExtension == "mp3" }
-            print("urls:",mp3Files)
-            let mp3FileNames = mp3Files.map{ $0.deletingPathExtension().lastPathComponent }
-            print("list:", mp3FileNames)
-            
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }*/
+         // Get the directory contents urls (including subfolders urls)
+         let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil, options: [])
+         //print(directoryContents)
+         
+         // if you want to filter the directory contents you can do like this:
+         let mp3Files = directoryContents.filter{ $0.pathExtension == "mp3" }
+         print("urls:",mp3Files)
+         let mp3FileNames = mp3Files.map{ $0.deletingPathExtension().lastPathComponent }
+         print("list:", mp3FileNames)
+         
+         } catch let error as NSError {
+         print(error.localizedDescription)
+         }*/
     }
-
+    
 }
